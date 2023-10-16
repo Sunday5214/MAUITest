@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp2"
+             x:Class="MauiApp2.MainPage">
+    <Grid Margin="0,0,0,3" HorizontalOptions="FillAndExpand" x:Name="container" HeightRequest="80">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Entry Placeholder="Test PlaceHolder" 
+             Keyboard="Numeric" Margin="0" 
+             HorizontalOptions="FillAndExpand" Grid.Column="0"/>
+        <Button x:Name="btnSendCode" Text="123" Grid.Column="1"
+              WidthRequest="{Binding Width, Source={x:Reference container}, Mode=Default}"
+              LineBreakMode="NoWrap"
+              HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        </Button>
+    </Grid>
+</ContentPage>
